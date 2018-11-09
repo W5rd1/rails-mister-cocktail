@@ -23,21 +23,21 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img class='carousel-image' src="https://www.theinnatwoodhallspa.co.uk/wp-content/uploads/2018/10/long-island-icetea-inn-at-woodhall-spa.jpg" alt="first slide">
+      <%= cl_image_tag("tvzclfwjwcycxyjapgee.jpg", class: "carousel-image") %>
       <div class="carousel-caption">
         <h1>Long Island Iced Tea</h1>
         <%= link_to "Find out more", cocktail_path(Cocktail.find_by(name: "long island iced tea").id) %>
       </div>
     </div>
     <div class="item">
-      <img class='carousel-image' src="https://assets.epicurious.com/photos/57990971e4857f9f1047d07e/2:1/w_1260%2Ch_630/fresh-lime-margarita.jpg" alt="second slide">
+      <%= cl_image_tag("erzfanmutalopxba76cy.jpg", class: "carousel-image") %>
       <div class="carousel-caption">
         <h1>Margarita</h1>
         <%= link_to "Find out more", cocktail_path(Cocktail.find_by(name: "margarita").id) %>
       </div>
     </div>
     <div class="item">
-      <img class='carousel-image' src="http://marxfood.com/wp-content/uploads/mf-Saffron-Rye-Whiskey-Sour-Feature-1200x800.jpg" alt="second slide">
+      <%= cl_image_tag("eg6kqdrzkqvopafi9i3g.jpg", class: "carousel-image") %>
       <div class="carousel-caption">
         <h1>Whiskey Sour</h1>
         <div class="mikes-button"><%= link_to "Find out more", cocktail_path(Cocktail.find_by(name: "whiskey sour").id) %></div>
