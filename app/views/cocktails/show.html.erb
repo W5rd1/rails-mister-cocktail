@@ -1,2 +1,8 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<h1><%= @cocktail.name %></h1>
+<h2>Ingredients:</h2>
+<ul>
+	<% @cocktail.doses.each do |dose| %>
+		<li><%= dose.description %> of <%= dose.ingredient.name   %></li>
+	<% end %>
+</ul> 
+<!-- .each { |dose| if dose.ingredient_id == ingredient[:id] dose.description }   -->

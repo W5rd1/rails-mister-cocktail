@@ -5,3 +5,24 @@
 width: 100vw;
 height: 100vh;
 }
+.item a {
+
+	padding: 4px 20px;
+	border-radius: 3px;
+	background-color: rgba(150,150,150,0.8);
+	box-shadow: 0 1px 1px rgba(200,200,200,0.5	);
+}
+
+.dots {
+	bottom: 0px !important;
+}
+.box {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+li {
+	list-style: none;
+}
