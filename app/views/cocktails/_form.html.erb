@@ -1,33 +1,39 @@
-<label>Single-Select</label>
-<select>
-  <option value="ford">Ford</option>
-  <option value="chevy">Chevrolet</option>
-  <option value="dodge">Dodge</option>
-</select>
+<div class="container">
+  <h1>Add a cocktail</h1>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name, :input_html => { :class => "cocktail_name" } %>
+    <p>How many ingredients?</p>
+    <select name="Number of ingredients" id="select-number-of-ingredients">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <p>Choose ingredients</p>
+    <span class="">
+      <%= f.input :ingredients, as: :select Ingredient.all.map(&:name) %>
+    </span>
+    <span class="">
+      <%= f.input :ingredients, as: :select Ingredient.all.map(&:name) %>
+    </span>
 
-<%= simple_form_for @cocktail,  
-  wrapper_mappings: {
-    check_boxes:    :vertical_collection,
-    radio_buttons:  :vertical_collection,
-    file:           :custom_file,
-    boolean:        :custom_boolean_switch
-  } do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <% if @cocktail.errors.any? %>
-    <div class="errors-container">
-      <ul>
-        <% @cocktail.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+    <span class="">
+      <%= f.input :ingredients, as: :select Ingredient.all.map(&:name) %>
+    </span>
+
+    <span class="">
+      <%= f.input :ingredients, as: :select Ingredient.all.map(&:name) %>
+    </span>
+
+    <span class="">
+      <%= f.input :ingredients, as: :select Ingredient.all.map(&:name) %>
+    </span>
+
+
+    <p><%= f.submit %></p>
   <% end %>
+  <%= link_to "Back to cocktails!", cocktails_path %>
 
-  <div class="form-inputs">
-  <%= f.input :name %>
-  <%= f.select :ingredients, Ingredient.all.map(&:name) %>
-  </div>
+</div>
 
-  <%= f.button :submit %>
-<% end %>

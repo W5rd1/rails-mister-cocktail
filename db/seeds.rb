@@ -12,7 +12,7 @@ ingredients["drinks"].each do |ingredient|
 end
 
 # populate cocktails
-cocktails = Array.new(50) { Faker::Zelda.character }
+cocktails = ["long island iced tea", "margarita", "whiskey sour"]
 
 cocktails.each do |cocktail|
   c = Cocktail.create(name: cocktail)
