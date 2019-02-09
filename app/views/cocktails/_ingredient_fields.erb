@@ -1,0 +1,3 @@
+<div class="nested-fields">
+  <%= f.input :name, collection: Ingredient.all.map(&:name) %>
+</div>
